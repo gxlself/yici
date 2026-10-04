@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "renders": {
+    "small": {
+      "src": "small-paper.png",
+      "alt": "一词桌面小号小组件：commute，音标与释义"
+    },
+    "medium": {
+      "src": "medium-paper.png",
+      "alt": "一词桌面中号小组件：commute 的释义与荧光笔高亮例句"
+    },
+    "large": {
+      "src": "large-paper.png",
+      "alt": "一词桌面大号小组件：英美音标、两条例句、词形与搭配"
+    },
+    "lockInline": {
+      "src": "lock-inline.png",
+      "alt": "一词锁屏单行小组件：commute · 通勤"
+    },
+    "standby": {
+      "src": "standby-night.png",
+      "alt": "一词在 StandBy 夜间模式下的红色单色显示"
+    }
+  }
+}

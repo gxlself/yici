@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0e18">
+  <meta name="description" content="一词 YiCi 隐私政策：不收集数据，学习记录只在设备和用户的 iCloud 私有数据库中。">
+  <title>隐私政策 / Privacy · 一词 YiCi</title>
+  <link rel="canonical" href="https://gxlself.github.io/yici/privacy.html">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .policy { max-width: 860px; margin-inline: auto; padding-block: 64px 88px; }
+    .policy h1 { font-size: 40px; line-height: 1.35; margin-bottom: 18px; }
+    .policy h2 { font-family: var(--sans); font-size: 23px; margin: 36px 0 12px; }
+    .policy p, .policy li { color: #c6ccda; overflow-wrap: anywhere; }
+    .policy p + p { margin-top: 14px; }
+    .policy ul { list-style: disc; padding-left: 23px; }
+    .policy li + li { margin-top: 8px; }
+    .policy a { color: var(--blue); text-decoration: underline; text-underline-offset: 4px; }
+    .policy .revision { font-size: 13px; color: var(--muted); margin-bottom: 32px; }
+    .policy section[lang] { border-top: 1px solid var(--red); margin-top: 52px; padding-top: 36px; }
+    .policy-nav { display: flex; flex-wrap: wrap; gap: 22px; }
+    @media (max-width: 600px) {
+      .wrap { width: calc(100% - 40px); }
+      .header-inner { height: auto; min-height: 78px; gap: 16px; flex-wrap: wrap; padding-block: 15px; }
+      .policy { padding-block: 38px 64px; }
+      .policy h1 { font-size: 32px; }
+      .footer-links { flex-wrap: wrap; justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#policy">跳到正文 / Skip to content</a>
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="brand" href="./"><img src="assets/favicon.png" width="32" height="32" alt=""><span>一词<span class="brand-dot">.</span></span></a>
+    <div class="policy-nav"><a href="#english" lang="en">English</a><a href="support.html">支持 / Support</a></div>
+  </div></header>
+  <main class="wrap policy" id="policy">
+    <p class="eyebrow"><span class="red-rule"></span>一词 · YiCi</p>
+    <h1>隐私政策</h1>
+    <p class="revision">生效日期：2026 年 10 月 4 日 · 开发者：Xiaolong Gao</p>
+    <p>一词不收集个人数据。没有开发者账号、广告、分析 SDK、远程埋点或跨 App 追踪。你不需要向开发者注册或登录，离线也能学习。</p>
+
+    <h2>设备上保存什么</h2>
+    <p>词库、音标与例句随 App 附带。学习进度、收藏、设置、今日卡组与本地操作记录保存在设备上的数据库中，供 App 与小组件使用。语音缓存也只保存在设备上。Mac 的菜单栏等本机设置不参与跨设备同步；手表提醒由手表本地安排。</p>
+
+    <h2>你的 iCloud</h2>
+    <p>开启 iCloud 同步时，学习进度、收藏、学习设置与今日卡组会通过 Apple CloudKit 存入你自己的 iCloud 私有数据库。开发者无法访问该数据库，也不通过自己的服务器接收这些记录。本地操作记录与语音缓存不上传给开发者。</p>
+    <p>同步需要登录 Apple 的 iCloud 并联网，使用你的 iCloud 储存空间。可在一词设置中关闭同步；关闭同步不会自动删除已经存入 iCloud 的记录。Apple 处理 iCloud 服务本身的数据，适用 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</p>
+
+    <h2>发音与通知</h2>
+    <p>发音使用 Apple 的设备端系统语音。单词或例句不会发送到第三方语音服务，不录音、不使用麦克风。某些英语语音需要你先通过系统设置下载；下载由 Apple 处理。通知需经你授权，只在设备本地安排，没有开发者推送服务。</p>
+
+    <h2>导出、重置与删除</h2>
+    <ul>
+      <li>在 iPhone 一词的“设置 → 进度与数据 → 导出进度”导出 JSON，包含设置、学习记录与本地操作记录。文件由你选择保存位置。分享前请确认接收者可信。</li>
+      <li>“重置学习进度”清除学习进度、收藏与卡组；若同步开启，会排队同步相应删除。它不是“删除全部数据”，仍保留设置、本地操作记录，并可能生成新的学习卡组。</li>
+      <li>要删除所有副本，先在每台设备关闭一词同步、移除小组件并退出 App。在系统的 Apple 账户 → iCloud → 管理储存空间中，若列出“一词”，选择删除它的数据；然后在各设备删除 App 的本地数据。删除 iPhone App 不会替你删除 Mac、手表或 iCloud 的副本。操作系统不同，菜单名称可能略有不同。</li>
+      <li>导出的 JSON 不会随 App 删除，请从保存它的“文件”、备份或云盘中自行删除。卸载后再安装并开启同步，仍未删除的 iCloud 副本可能恢复到设备。</li>
+    </ul>
+    <p>详细步骤见 <a href="support.html#data">数据管理支持</a>。开发者无法代你查看、导出或删除私有 iCloud 数据。</p>
+
+    <h2>数据来源与许可</h2>
+    <ul>
+      <li><a href="https://github.com/skywind3000/ECDICT">ECDICT</a>：MIT，词典资料。</li>
+      <li><a href="https://github.com/cmusphinx/cmudict">CMU Pronouncing Dictionary</a>：BSD-style，发音资料。</li>
+      <li><a href="https://tatoeba.org/zh-cn/">Tatoeba</a>：<a href="https://creativecommons.org/licenses/by/2.0/fr/">CC BY 2.0 FR</a>，部分双语例句。详情中的原始编号与来源链接用于归属说明；部分内容经过整理，部分例句为编写内容。</li>
+      <li>数据库组件 <a href="https://github.com/groue/GRDB.swift">GRDB</a>：MIT。完整版权与许可见 App 内“数据来源与许可”。</li>
+    </ul>
+    <p>点开来源链接时，浏览器访问相应网站，适用该网站的隐私政策。本静态网站不安装分析或广告脚本；GitHub Pages 托管方可能按其服务政策处理访问日志。App Store 购买由 Apple 处理，App 不接收支付卡资料。</p>
+
+    <h2>联系与变更</h2>
+    <p>隐私问题请联系 <a href="mailto:gxlself@gmail.com">gxlself@gmail.com</a>。你主动发送邮件时，邮箱服务商会处理邮件，开发者可见你提供的地址与内容；不要发送敏感记录。该自愿支持渠道不是 App 内数据采集。政策如有变更，会在本页更新生效日期。</p>
+
+    <section id="english" lang="en-US" aria-labelledby="english-title">
+      <h1 id="english-title">Privacy Policy</h1>
+      <p class="revision">Effective October 4, 2026 · Developer: Xiaolong Gao</p>
+      <p>YiCi does not collect personal data. There are no developer accounts, ads, analytics SDKs, remote telemetry or cross-app tracking. No registration with the developer is needed. Study works offline.</p>
+      <h2>Stored on your devices</h2>
+      <p>Vocabulary, IPA and examples ship with the app. Progress, favorites, settings, daily decks and local action history stay in a device database shared by the app and its widgets. Speech caches are local too. Mac-specific preferences stay on the Mac; Watch reminders are locally scheduled.</p>
+      <h2>Your iCloud</h2>
+      <p>If enabled, Apple's CloudKit syncs progress, favorites, study settings and daily decks to your own private iCloud database. The developer cannot access it and operates no server that receives those records. Local action history and speech caches are not sent to the developer.</p>
+      <p>Sync requires an iCloud account, connectivity and iCloud storage. Turn it off in YiCi settings. Turning sync off does not delete records already stored in iCloud. Apple's iCloud service is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+      <h2>Speech and notifications</h2>
+      <p>Speech uses Apple's on-device system voices. Words and examples are not sent to a third-party speech service. No recording or microphone access is used. Some voices require an initial download in system settings, handled by Apple. Notifications require your permission and are locally scheduled, not sent by a developer push server.</p>
+      <h2>Export, reset and deletion</h2>
+      <ul>
+        <li>On iPhone, use 设置 → 进度与数据 → 导出进度 (Settings → Progress and Data → Export Progress) to save JSON containing settings, progress and local action history. You choose the location and any recipients.</li>
+        <li>Reset Learning Progress clears progress, favorites and decks and queues those deletions for sync if enabled. It is not a full data-erasure control: settings and local action history remain, and new decks may be created.</li>
+        <li>For complete removal, disable YiCi sync on every device, remove widgets and quit the apps. In system Apple Account → iCloud → Manage Storage, delete YiCi data if listed. Remove the app's local data on each device as well. Removing the iPhone app does not remove Mac, Watch or iCloud copies. System menu names vary.</li>
+        <li>Delete exported JSON and backups separately. Reinstalling and enabling sync can restore any iCloud copy you have not deleted.</li>
+      </ul>
+      <p>See <a href="support.html#data-en">data-management support</a>. The developer cannot view, export or erase your private iCloud records on your behalf.</p>
+      <h2>Sources and licenses</h2>
+      <p><a href="https://github.com/skywind3000/ECDICT">ECDICT</a>: MIT. <a href="https://github.com/cmusphinx/cmudict">CMU Pronouncing Dictionary</a>: BSD-style. Some examples come from <a href="https://tatoeba.org/">Tatoeba</a> under <a href="https://creativecommons.org/licenses/by/2.0/fr/">CC BY 2.0 FR</a>, with sentence IDs and source links in word details. Some content is edited or authored. <a href="https://github.com/groue/GRDB.swift">GRDB</a> is MIT-licensed. Full notices are in the app.</p>
+      <p>Source links open external websites with their own privacy policies. This static site has no analytics or advertising scripts; GitHub Pages may process hosting access logs under its service policies. Apple handles App Store purchases; the app does not receive payment-card information.</p>
+      <h2>Contact and changes</h2>
+      <p>Contact <a href="mailto:gxlself@gmail.com">gxlself@gmail.com</a>. If you voluntarily email support, email providers process the message and the developer can see the address and content you send. Do not send sensitive records. This optional support channel is not in-app data collection. Policy changes will be reflected in the effective date on this page.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><a class="brand" href="./"><img src="assets/favicon.png" width="28" height="28" alt=""><span>一词<span class="brand-dot">.</span></span></a><p>© 2026 Xiaolong Gao</p><div class="footer-links"><a href="privacy.html">隐私 / Privacy</a><a href="support.html">支持 / Support</a><a href="./">首页 / Home</a></div></div></footer>
+</body>
+</html>

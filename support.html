@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0e18">
+  <meta name="description" content="一词 YiCi 支持：小组件、离线发音、iCloud 同步、导出与删除学习记录。">
+  <title>支持 / Support · 一词 YiCi</title>
+  <link rel="canonical" href="https://gxlself.github.io/yici/support.html">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .support { max-width: 860px; margin-inline: auto; padding-block: 64px 88px; }
+    .support h1 { font-size: 40px; line-height: 1.35; margin-bottom: 18px; }
+    .support h2 { font-family: var(--sans); font-size: 23px; margin: 36px 0 12px; }
+    .support p, .support li { color: #c6ccda; overflow-wrap: anywhere; }
+    .support p + p { margin-top: 14px; }
+    .support ol { list-style: decimal; padding-left: 25px; }
+    .support li + li { margin-top: 10px; }
+    .support a { color: var(--blue); text-decoration: underline; text-underline-offset: 4px; }
+    .support .revision { font-size: 13px; color: var(--muted); margin-bottom: 30px; }
+    .support section[lang] { border-top: 1px solid var(--red); margin-top: 52px; padding-top: 36px; }
+    .support-nav { display: flex; flex-wrap: wrap; gap: 22px; }
+    @media (max-width: 600px) {
+      .wrap { width: calc(100% - 40px); }
+      .header-inner { height: auto; min-height: 78px; gap: 16px; flex-wrap: wrap; padding-block: 15px; }
+      .support { padding-block: 38px 64px; }
+      .support h1 { font-size: 32px; }
+      .footer-links { flex-wrap: wrap; justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#support">跳到正文 / Skip to content</a>
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="brand" href="./"><img src="assets/favicon.png" width="32" height="32" alt=""><span>一词<span class="brand-dot">.</span></span></a>
+    <div class="support-nav"><a href="#english" lang="en">English</a><a href="privacy.html">隐私 / Privacy</a></div>
+  </div></header>
+  <main class="wrap support" id="support">
+    <p class="eyebrow"><span class="red-rule"></span>一词 · YiCi</p>
+    <h1>支持</h1>
+    <p class="revision">更新：2026 年 10 月 4 日</p>
+    <p>联系 <a href="mailto:gxlself@gmail.com">gxlself@gmail.com</a>。反馈时请附设备型号、系统版本、一词版本，以及问题发生的步骤。截图请先遮住个人信息；不需要提供 Apple 密码或完整学习进度文件。</p>
+    <h2>添加小组件</h2>
+    <ol>
+      <li>iPhone 主屏幕：长按空白处，选择“编辑 → 添加小组件”（旧版系统为左上角加号），搜索“一词”，选择小、中或大号，点“添加小组件”。</li>
+      <li>锁屏：长按锁屏，选择“自定 → 锁定屏幕”，点时间下的小组件区域，添加“一词”。日期附近可使用单行样式。锁屏空间与可选样式由系统决定。</li>
+      <li>StandBy：在支持的 iPhone 上开启系统“待机显示”，横向放置并充电。长按小组件区域编辑叠放，添加“一词”。部分机型需点亮屏幕才能持续查看。</li>
+      <li>Mac：右键桌面，选择“编辑小组件”，搜索“一词”。菜单栏单词需要打开 Mac App。</li>
+    </ol>
+    <p>小组件可在没有打开过 App 时使用默认词书和节奏。要调整词书、每日新词或轮换时段，请打开 App 的设置。卡片刷新受系统调度影响，不保证准点。</p>
+    <h2>发音没有声音</h2>
+    <p>先检查媒体音量和耳机连接，再在 App 详情试听。发音使用系统设备端英语语音，不需要录音权限。可到系统设置“辅助功能 → 朗读内容（或阅读与朗读）→ 声音 → 英语”下载语音，再在一词设置中选择口音与发音人。下载完成后的朗读可离线使用。</p>
+    <p>主屏幕和 StandBy 的交互卡片可直接发音，不打开 App。锁屏紧凑小组件主要用于显示内容，轻触进入详情。手表的“朗读”会打开手表 App。</p>
+    <h2>iCloud 与离线学习</h2>
+    <p>词库、例句和系统朗读保存在设备上，不联网也能使用。只有跨设备同步需要联网、登录同一个 iCloud 账户并有可用 iCloud 空间。检查一词设置中的“iCloud 同步”及系统 iCloud 权限；首次同步可能需要等待。记录在你的私有 CloudKit 数据库中，开发者无法查看。App 没有广告、分析埋点或追踪。</p>
+    <h2>Apple Watch 提醒</h2>
+    <p>在手表 App 设置中开启学习提醒并允许通知，检查学习时刻、安静时段和系统专注模式。提醒是本地通知，不由开发者服务器发送。系统后台调度可能影响提醒更新；打开手表 App 可让其重新安排卡组和提醒。</p>
+    <h2 id="data">导出、重置与删除数据</h2>
+    <ol>
+      <li>备份：iPhone 一词“设置 → 进度与数据 → 导出进度”，把 JSON 保存到你选择的位置。它含设置、学习记录与本地操作记录；可通过“导入进度”恢复，不要公开分享。</li>
+      <li>重新开始学习：“重置学习进度”清除进度、收藏与今日卡组。同步开启时会排队同步这些删除；设置与操作记录不会全部删除，也可能立即出现新的卡组。</li>
+      <li>彻底删除：先在每台设备关闭一词的 iCloud 同步，移除小组件并退出 App，避免其它设备重新写入。系统“Apple 账户 → iCloud → 管理储存空间”若列出“一词”，删除其数据。系统版本不同，可能显示“储存空间”或“管理账户储存空间”。</li>
+      <li>删除每台设备上的本地副本：iPhone/iPad 通过系统储存空间选择“删除 App”，不是“卸载 App”；手表删除一词；Mac 删除 App 后，还需清除一词在本机沙盒和 App Group 中的应用数据。Mac 不应只把 App 拖入废纸篓就认为学习记录已清空；需要协助请邮件联系，开发者不会要求读取数据。</li>
+      <li>删除保存在“文件”、iCloud Drive、备份或其它云盘中的导出 JSON。删除 App 不会自动删除这些文件，iCloud 私有库数据也不会因关闭同步自动删除。</li>
+    </ol>
+    <p>以上操作会影响恢复能力，请先决定是否保留备份。开发者不能代你删除私有 iCloud 数据。重新安装并开启同步可能恢复尚未删除的副本。</p>
+    <h2>词库来源与纠错</h2>
+    <p>ECDICT（MIT）、CMU Pronouncing Dictionary（BSD-style）和部分 Tatoeba 例句（<a href="https://creativecommons.org/licenses/by/2.0/fr/">CC BY 2.0 FR</a>）。Tatoeba 来源编号与链接保留在详情中；部分内容经过整理或编写。完整许可见 App 设置中的“数据来源与许可”。纠错时提供单词、例句及来源编号即可，不需要你的学习记录。</p>
+    <h2>购买</h2>
+    <p>一词采用一次付费下载，无内购、订阅或广告。同一个 Apple 账户下使用通用购买版本。下载、付款及退款由 Apple 处理；购买问题请联系 <a href="https://support.apple.com/billing">Apple 账单支持</a>。各地区实际显示价格以 App Store 为准。</p>
+
+    <section id="english" lang="en-US" aria-labelledby="english-title">
+      <h1 id="english-title">Support</h1>
+      <p class="revision">Updated October 4, 2026</p>
+      <p>Email <a href="mailto:gxlself@gmail.com">gxlself@gmail.com</a> with your device model, OS version, YiCi version and steps to reproduce. Redact personal information in screenshots. Never send your Apple password or a full progress export. The current app interface and Chinese translations are in Simplified Chinese.</p>
+      <h2>Add widgets</h2>
+      <ol>
+        <li>iPhone Home Screen: long-press an empty area, choose Edit → Add Widget (or the plus button on older systems), search for 一词, choose a size and add it.</li>
+        <li>Lock Screen: long-press, choose Customize → Lock Screen and add YiCi below the clock or in the inline date area.</li>
+        <li>StandBy: enable StandBy in system settings, place a supported iPhone horizontally while charging, then long-press a widget stack to add YiCi. Display behavior varies by device.</li>
+        <li>Mac: right-click the desktop, choose Edit Widgets and search for YiCi. Open the Mac app to use its menu-bar word.</li>
+      </ol>
+      <p>Widgets work with defaults before the first app launch. Change the word book, pace and rotation in the app. Refresh timing is controlled partly by the operating system.</p>
+      <h2>Speech</h2>
+      <p>Check media volume and headphones, then try speech in word details. YiCi uses on-device system English voices, with no microphone, recording or third-party speech service. Download an English voice under system Accessibility → Spoken Content (or Read &amp; Speak) → Voices, then select the accent and voice in YiCi. Once installed, speech works offline.</p>
+      <p>Interactive Home Screen and StandBy cards speak without opening the app. Compact Lock Screen widgets mainly display content and open details. Watch speech opens the Watch app.</p>
+      <h2>Sync and Watch reminders</h2>
+      <p>Offline vocabulary and examples need no internet. Optional iCloud sync requires the same iCloud account, connectivity and available storage. Check YiCi's sync switch and system iCloud permissions. Your private CloudKit records are not accessible to the developer. No ads, analytics or tracking are used.</p>
+      <p>Enable Watch study reminders and notification permission in the Watch app. Check study moments, quiet hours and Focus settings. Notifications are local; opening the Watch app can refresh its schedule. Background scheduling is controlled by the system.</p>
+      <h2 id="data-en">Export, reset and delete</h2>
+      <ol>
+        <li>On iPhone, 设置 → 进度与数据 → 导出进度 (Settings → Progress and Data → Export Progress) saves JSON containing settings, progress and local action history. Import Progress can restore it. Keep the file private.</li>
+        <li>Reset Learning Progress removes progress, favorites and decks, and queues the deletions for sync if enabled. Settings and action history remain; a new deck may be created.</li>
+        <li>For full erasure, disable YiCi sync on every device, remove widgets and quit the apps. Under system Apple Account → iCloud → Manage Storage, delete YiCi data if listed. Menu wording varies by OS version.</li>
+        <li>Remove local copies on every device. On iPhone use Delete App, not Offload App; also delete the Watch app. On Mac, removing the application alone does not erase its sandbox and App Group learning data; email for help identifying YiCi-only storage without sharing its contents.</li>
+        <li>Delete exported JSON from Files, iCloud Drive, backups or other locations separately. Disabling sync and removing an app do not by themselves erase iCloud records or exports.</li>
+      </ol>
+      <p>Decide whether to keep a backup first. The developer cannot erase private iCloud records on your behalf. Reinstalling and enabling sync may restore copies that remain.</p>
+      <h2>Sources and corrections</h2>
+      <p>ECDICT (MIT), CMU Pronouncing Dictionary (BSD-style) and some Tatoeba examples (<a href="https://creativecommons.org/licenses/by/2.0/fr/">CC BY 2.0 FR</a>). Sentence IDs and source links are in details; some content is edited or authored. Full notices are in Data Sources and Licenses. Send the word, example and source ID for corrections, not your learning history.</p>
+      <h2>Purchases</h2>
+      <p>YiCi is paid upfront, with no in-app purchases, subscriptions or ads. Universal purchase uses the same Apple account. Apple handles downloads, payments and refunds. Contact <a href="https://support.apple.com/billing">Apple billing support</a> for purchase issues. Local prices are those shown in the App Store.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><a class="brand" href="./"><img src="assets/favicon.png" width="28" height="28" alt=""><span>一词<span class="brand-dot">.</span></span></a><p>© 2026 Xiaolong Gao</p><div class="footer-links"><a href="privacy.html">隐私 / Privacy</a><a href="support.html">支持 / Support</a><a href="./">首页 / Home</a></div></div></footer>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B0E18">
+  <title>一词 · 不用打开 App 的背单词</title>
+  <meta name="description" content="把一张单词卡放在 iPhone 桌面和锁屏。每次看手机，顺便认识一个词。15,271 个单词、9 本词书、27,161 条中英例句，离线可用，无账号、无广告、不收集数据。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="一词">
+  <meta property="og:title" content="一词 · 不用打开 App 的背单词">
+  <meta property="og:description" content="每次看手机，顺便认识一个词。iPhone 桌面与锁屏单词卡，离线可用，不打卡，不催你。">
+  <meta property="og:image" content="https://gxlself.github.io/yici/assets/og.png">
+  <meta property="og:url" content="https://gxlself.github.io/yici/">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="一词：不用打开 App 的背单词。白色单词卡与 iPhone 锁屏上的 commute。">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="一词 · 不用打开 App 的背单词">
+  <meta name="twitter:description" content="一眼，一个词。不打卡，不催你，也不用专门开始。">
+  <meta name="twitter:image" content="https://gxlself.github.io/yici/assets/og.png">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <!-- Button symbols use Lucide's ISC-licensed icon paths. -->
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></symbol>
+      <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14m-7-7 7 7 7-7"></path></symbol>
+      <symbol id="i-volume" viewBox="0 0 24 24"><path d="m11 5-6 4H2v6h3l6 4V5Zm4.54 3.46a5 5 0 0 1 0 7.07m3.54-10.61a10 10 0 0 1 0 14.14"></path></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"></path></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="m18 6-12 12M6 6l12 12"></path></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42m0-14.14-1.42 1.42M6.35 17.65l-1.42 1.42"></path></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6.25 6.25 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></symbol>
+      <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M20 16.2A4.5 4.5 0 0 0 18 7.5h-1.3a7 7 0 1 0-13.2 6.4A4 4 0 0 0 6 21h12a4 4 0 0 0 2-4.8Z"></path></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"></path><path d="m9 12 2 2 4-4"></path></symbol>
+      <symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="m2 2 20 20M8.5 16.5a5 5 0 0 1 7 0M12 20h.01M5 12a10 10 0 0 1 5.17-2.69M16.7 10.7A10 10 0 0 1 19 12M2 8.5a16 16 0 0 1 2.82-1.91M8.5 4.5A16 16 0 0 1 22 8.5"></path></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="11" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z"></path><circle cx="12" cy="13" r="3"></circle></symbol>
+      <symbol id="i-flashlight" viewBox="0 0 24 24"><path d="M18 6c0 2-2 2-2 4v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V10c0-2-2-2-2-4V2h12v4ZM6 6h12M12 12h.01"></path></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18m-10 4h1v4"></path></symbol>
+      <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-5-5L5 21"></path></symbol>
+      <symbol id="i-map" viewBox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3V6Zm6-3v15m6-12v15"></path></symbol>
+      <symbol id="i-note" viewBox="0 0 24 24"><path d="M16 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8l-5-5Zm0 0v5h5M8 13h8m-8 4h5"></path></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M11 18h2"></path></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="一词，回到顶部">
+        <img src="assets/apple-touch-icon.png" width="36" height="36" alt="">
+        <span>一词<span class="brand-dot">.</span></span>
+      </a>
+      <nav aria-label="主导航">
+        <a href="#playground">试一张</a>
+        <a href="#day">一天的节奏</a>
+        <a href="#family">卡片家族</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+      <a class="header-status" href="#join"><span class="status-dot"></span>即将开放 <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="red-rule"></span>一词 · iPhone 单词小组件</p>
+          <h1 id="hero-title"><span class="headline-line"><span class="marker marker-hero">不用打开</span> <span class="app-word">App</span></span><span class="headline-line">的背单词<span class="yellow-period">。</span></span></h1>
+          <p class="hero-sub">每次看手机，顺便认识一个词。<br>不打卡，不催你，也不用专门开始。</p>
+          <div class="hero-actions">
+            <a class="button button-yellow" href="#playground">先试一张 <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+            <span class="coming-label">App Store 即将上架</span>
+          </div>
+          <div class="hero-promises"><span>离线可用</span><span>无账号</span><span>无广告</span></div>
+          <div class="hero-wink"><span class="wink-word" lang="en">procrastinate</span><span>v. 拖延</span><p>拖延背单词？这次，不用先开始。</p></div>
+        </div>
+
+        <div class="hero-scene" aria-label="iPhone 实时锁屏与一词单词卡">
+          <div class="scene-grid" aria-hidden="true"></div>
+          <div class="float-card float-one" aria-hidden="true">
+            <div class="float-drift index-card">
+              <div class="float-label">不必等「明天」</div>
+              <span class="float-word" lang="en">procrastinate</span>
+              <span class="float-ipa">/prəˈkræstɪneɪt/</span>
+              <span class="float-meaning">v. 拖延</span>
+              <p lang="en">I have to stop <mark>procrastinating</mark>.</p>
+              <span class="float-translation">我不能再拖延了。</span>
+            </div>
+          </div>
+          <div class="float-card float-two" aria-hidden="true">
+            <div class="float-drift index-card">
+              <span class="float-label">一眼，一个词</span>
+              <span class="float-word" lang="en">vivid</span>
+              <span class="float-ipa">/ˈvɪvɪd/</span>
+              <span class="float-meaning">adj. 生动的；鲜艳的</span>
+              <p lang="en">She has a <mark>vivid</mark> memory<br>of her first day at school.</p>
+              <span class="float-translation">她对上学第一天记忆犹新。</span>
+            </div>
+          </div>
+          <div class="float-card float-three" aria-hidden="true">
+            <div class="float-drift index-card index-card-ink">
+              <span class="float-label">下次看手机，再遇见</span>
+              <span class="float-word" lang="en">reluctant</span>
+              <span class="float-ipa">/rɪˈlʌktənt/</span>
+              <span class="float-meaning">adj. 不情愿的；勉强的</span>
+              <p lang="en">Tom is <mark>reluctant</mark><br>to talk about it.</p>
+            </div>
+          </div>
+
+          <div class="phone hero-phone">
+            <div class="phone-button phone-button-left"></div><div class="phone-button phone-button-right"></div>
+            <div class="phone-screen">
+              <svg class="wallpaper" viewBox="0 0 280 590" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="280" height="590" fill="#7A939B"></rect>
+                <path d="M-150 540C-20 235 211 432 392 17L410 590H-150Z" fill="#ADC0C1"></path>
+                <path d="M-120 602C19 289 235 404 362 60L374 180C253 475 76 385-5 660Z" fill="#D5DFDC"></path>
+                <path d="M-90 650C26 357 242 453 337 204L355 271C264 511 118 424 25 674Z" fill="#F1F1E9"></path>
+                <path d="M-58 690C48 413 240 500 312 358L325 447C223 573 158 498 93 701Z" fill="#85999E"></path>
+                <path d="M-54 704C71 484 242 546 308 498L300 590H-54Z" fill="#B9CACB"></path>
+              </svg>
+              <div class="dynamic-island" aria-hidden="true"></div>
+              <div class="lock-screen">
+                <svg class="icon lock-symbol" aria-hidden="true"><use href="#i-lock"></use></svg>
+                <p class="lock-inline" lang="en">commute <span lang="zh-CN">· 通勤</span></p>
+                <time class="lock-clock live-time">07:00</time>
+                <p class="lock-date live-date">10月3日 星期六</p>
+                <div class="lock-widget">
+                  <div class="lock-widget-head"><strong lang="en">commute</strong><span>/kəˈmjuːt/</span></div>
+                  <p>v. 通勤；乘车往返</p>
+                  <p class="lock-example" lang="en">I spend a lot of time <b>commuting</b>.</p>
+                  <div class="lock-widget-actions" aria-hidden="true"><svg class="icon"><use href="#i-volume"></use></svg><svg class="icon"><use href="#i-check"></use></svg></div>
+                </div>
+              </div>
+              <div class="lock-bottom" aria-hidden="true"><span><svg class="icon"><use href="#i-flashlight"></use></svg></span><span><svg class="icon"><use href="#i-camera"></use></svg></span></div>
+              <div class="home-indicator" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="scene-caption"><span class="live-dot"></span>你的时间，你的一词。</div>
+        </div>
+      </div>
+      <div class="wrap hero-bottom"><span><time>07:00</time> · 一天的第一词，刚好看见。</span><a href="#day" aria-label="看看一天的节奏"><svg class="icon" aria-hidden="true"><use href="#i-down"></use></svg></a><span class="hero-bottom-right">一眼 · 一个词</span></div>
+    </section>
+
+    <section class="day-story" id="day" aria-labelledby="day-title">
+      <div class="story-pin">
+        <div class="wrap story-layout">
+          <div class="story-copy">
+            <p class="eyebrow"><span class="red-rule"></span>从早到晚</p>
+            <h2 id="day-title">不是抽时间。<br>是<span class="marker">顺便看见</span>。</h2>
+            <p class="section-copy">每天 3 个新词，穿插到期复习。<br>卡片按当天的量自动换，半小时到两小时一张。</p>
+            <div class="story-moment">
+              <span class="moment-label" id="moment-label">第一眼 · 新词</span>
+              <time class="moment-time" id="moment-time">07:00</time>
+              <p id="moment-copy">出门前，先遇见 reluctant。</p>
+            </div>
+            <p class="refresh-note">点按钮就能换词，<br>不占系统的定时刷新额度。</p>
+          </div>
+          <div class="story-device">
+            <div class="phone day-phone" id="day-phone">
+              <div class="phone-button phone-button-left"></div><div class="phone-button phone-button-right"></div>
+              <div class="phone-screen home-screen">
+                <svg class="wallpaper" viewBox="0 0 280 590" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <rect width="280" height="590" fill="#8A9DA6"></rect>
+                  <path d="M-120 660C2 249 229 438 364 35L388 590Z" fill="#C3D0D2"></path>
+                  <path d="M-110 700C22 341 227 481 349 192L368 334C264 567 114 472 21 729Z" fill="#EDF0EE"></path>
+                  <path d="M-63 708C74 451 247 552 319 389L320 520C247 618 147 560 109 743Z" fill="#6C8796"></path>
+                </svg>
+                <div class="dynamic-island" aria-hidden="true"></div>
+                <div class="home-top"><time id="phone-slot-time">07:00</time><span class="home-signal" aria-hidden="true">▮▮▮ <span class="battery"></span></span></div>
+                <div class="home-content">
+                  <p class="home-date">今天，慢慢来。</p>
+                  <div class="day-widget index-card" id="day-widget">
+                    <div class="day-word-row"><strong id="day-word" lang="en">reluctant</strong><svg class="icon" aria-hidden="true"><use href="#i-volume"></use></svg></div>
+                    <span class="day-ipa" id="day-ipa">/rɪˈlʌktənt/</span>
+                    <p class="day-meaning" id="day-meaning">adj. 不情愿的；勉强的</p>
+                    <span class="widget-rule"></span>
+                    <p class="day-example" id="day-example" lang="en">Tom is <mark>reluctant</mark> to talk about it.</p>
+                    <div class="day-translation-row"><span id="day-translation">汤姆不太愿意谈这件事。</span><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></div>
+                  </div>
+                  <div class="home-app-grid" aria-hidden="true">
+                    <span><i class="app-calendar"><svg class="icon"><use href="#i-calendar"></use></svg></i>日历</span>
+                    <span><i class="app-photo"><svg class="icon"><use href="#i-image"></use></svg></i>照片</span>
+                    <span><i class="app-map"><svg class="icon"><use href="#i-map"></use></svg></i>地图</span>
+                    <span><i class="app-note"><svg class="icon"><use href="#i-note"></use></svg></i>备忘录</span>
+                    <span><i class="app-camera"><svg class="icon"><use href="#i-camera"></use></svg></i>相机</span>
+                    <span><i class="app-clock"><svg class="icon"><use href="#i-clock"></use></svg></i>时钟</span>
+                    <span><i class="app-yici"><img src="assets/apple-touch-icon.png" width="42" height="42" alt=""></i>一词</span>
+                    <span><i class="app-cloud"><svg class="icon"><use href="#i-cloud"></use></svg></i>文件</span>
+                  </div>
+                </div>
+                <div class="home-dock" aria-hidden="true"><i><svg class="icon"><use href="#i-phone"></use></svg></i><i><svg class="icon"><use href="#i-note"></use></svg></i><i><svg class="icon"><use href="#i-camera"></use></svg></i><i class="dock-yici"><img src="assets/apple-touch-icon.png" width="40" height="40" alt=""></i></div>
+                <div class="home-indicator" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+          <nav class="time-rail" aria-label="一天的单词轮换">
+            <ol>
+              <li><button type="button" data-slot="0" aria-current="step"><time>07:00</time><span>reluctant <small>新词</small></span></button></li>
+              <li><button type="button" data-slot="1"><time>09:00</time><span>abandon <small>复习</small></span></button></li>
+              <li><button type="button" data-slot="2"><time>11:00</time><span>commute <small>新词</small></span></button></li>
+              <li><button type="button" data-slot="3"><time>13:00</time><span>ambiguous <small>复习</small></span></button></li>
+              <li><button type="button" data-slot="4"><time>15:00</time><span>vivid <small>新词</small></span></button></li>
+              <li><button type="button" data-slot="5"><time>17:00</time><span>abandon <small>复习</small></span></button></li>
+              <li><button type="button" data-slot="6"><time>19:00</time><span>reluctant <small>再遇见</small></span></button></li>
+              <li><button type="button" data-slot="7"><time>21:00</time><span>ambiguous <small>复习</small></span></button></li>
+              <li><button type="button" data-slot="8"><time>23:00</time><span>晚安 <small>暂停轮换</small></span></button></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="playground section" id="playground" aria-labelledby="play-title">
+      <div class="wrap playground-layout">
+        <div class="play-copy">
+          <p class="eyebrow"><span class="red-rule"></span>一张卡，两个动作</p>
+          <h2 id="play-title">听一下。<br>或是，<span class="marker">认识了</span>。</h2>
+          <p class="section-copy">发音不跳走，认识就换词。<br>这就是你和一词的全部日常。</p>
+          <p class="play-aside">当然，什么都不点也可以。</p>
+        </div>
+        <div class="play-stage">
+          <div class="demo-controls">
+            <div class="theme-control" role="group" aria-label="卡片主题">
+              <button type="button" class="theme-button" data-theme="paper" aria-pressed="true" title="纸主题"><svg class="icon" aria-hidden="true"><use href="#i-sun"></use></svg><span>纸</span></button>
+              <button type="button" class="theme-button" data-theme="ink" aria-pressed="false" title="墨主题"><svg class="icon" aria-hidden="true"><use href="#i-moon"></use></svg><span>墨</span></button>
+            </div>
+            <label class="quiz-control"><span>测验模式</span><input id="quiz-mode" type="checkbox"><span class="switch-track" aria-hidden="true"></span></label>
+          </div>
+          <div class="widget-perspective">
+            <article class="widget-medium interactive-widget" id="demo-widget" data-theme="paper" aria-label="可操作的一词中号小组件">
+              <div class="widget-content" id="demo-content">
+                <div class="widget-word-row"><h3 id="demo-word" lang="en">commute</h3><span class="widget-ipa" id="demo-ipa" aria-hidden="true">/kəˈmjuːt/</span></div>
+                <p class="widget-meaning" id="demo-meaning"><span>v.</span> 通勤；乘车往返</p>
+                <span class="widget-rule"></span>
+                <p class="widget-example" id="demo-example" lang="en">I spend a lot of time <mark>commuting</mark>.</p>
+                <p class="widget-translation" id="demo-translation">我花很多时间通勤。</p>
+              </div>
+              <button type="button" class="widget-button speak-button" id="speak-word" aria-label="朗读单词 commute" aria-pressed="false" title="朗读单词"><svg class="icon" aria-hidden="true"><use href="#i-volume"></use></svg></button>
+              <button type="button" class="widget-button known-button" id="know-word" aria-label="认识 commute，换下一个词" title="认识，换下一个词"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></button>
+              <button type="button" class="quiz-reveal" id="reveal-word" hidden>显示释义</button>
+            </article>
+          </div>
+          <p class="demo-status" id="demo-status" role="status" aria-live="polite">今日新词 · 一眼，一个词</p>
+          <p class="demo-source" id="demo-source">例句：<a href="https://tatoeba.org/zh-cn/sentences/show/9811418" target="_blank" rel="noopener noreferrer">Tatoeba #9811418</a></p>
+          <div class="play-pagination" id="demo-pagination" role="group" aria-label="选择示例单词">
+            <button type="button" data-word="0" aria-label="commute" aria-pressed="true"></button>
+            <button type="button" data-word="1" aria-label="reluctant" aria-pressed="false"></button>
+            <button type="button" data-word="2" aria-label="vivid" aria-pressed="false"></button>
+            <button type="button" data-word="3" aria-label="abandon" aria-pressed="false"></button>
+            <button type="button" data-word="4" aria-label="ambiguous" aria-pressed="false"></button>
+            <button type="button" data-word="5" aria-label="procrastinate" aria-pressed="false"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="memory section" id="memory" aria-labelledby="memory-title">
+      <div class="wrap">
+        <div class="memory-heading">
+          <div><p class="eyebrow"><span class="red-rule"></span>七级记忆阶梯</p><h2 id="memory-title">不知不觉，<br>就<span class="marker">多记一点</span>。</h2></div>
+          <p class="section-copy">见过，不等于记住。<br>一词会在 1、2、4、7、15、30、60 天后，<br>让你和它再见一面。</p>
+        </div>
+        <div class="ladder-scene">
+          <svg class="ladder-svg" viewBox="0 0 820 420" role="img" aria-label="七级复习阶梯，间隔为 1、2、4、7、15、30、60 天">
+            <path class="ladder-ground" d="m40 340 574-210 180 83M40 370l594-211M107 397l595-209"></path>
+            <g class="ladder-step" data-step="0" transform="translate(52 294)"><path class="step-side" d="m0 0 52-25 70 17v56l-52 25-70-17Z"></path><path class="step-top" d="m0 0 52-25 70 17-52 25Z"></path><path class="step-front" d="m0 0 70 17v56L0 56Z"></path><text x="20" y="40">1<tspan class="step-unit" dx="4">天</tspan></text></g>
+            <g class="ladder-step" data-step="1" transform="translate(148 267)"><path class="step-side" d="m0 0 52-25 70 17v64l-52 25-70-17Z"></path><path class="step-top" d="m0 0 52-25 70 17-52 25Z"></path><path class="step-front" d="m0 0 70 17v64L0 64Z"></path><text x="20" y="40">2<tspan class="step-unit" dx="4">天</tspan></text></g>
+            <g class="ladder-step" data-step="2" transform="translate(244 240)"><path class="step-side" d="m0 0 52-25 70 17v72l-52 25-70-17Z"></path><path class="step-top" d="m0 0 52-25 70 17-52 25Z"></path><path class="step-front" d="m0 0 70 17v72L0 72Z"></path><text x="20" y="40">4<tspan class="step-unit" dx="4">天</tspan></text></g>
+            <g class="ladder-step" data-step="3" transform="translate(340 213)"><path class="step-side" d="m0 0 52-25 70 17v80l-52 25-70-17Z"></path><path class="step-top" d="m0 0 52-25 70 17-52 25Z"></path><path class="step-front" d="m0 0 70 17v80L0 80Z"></path><text x="20" y="40">7<tspan class="step-unit" dx="4">天</tspan></text></g>
+            <g class="ladder-step" data-step="4" transform="translate(436 186)"><path class="step-side" d="m0 0 52-25 70 17v88l-52 25-70-17Z"></path><path class="step-top" d="m0 0 52-25 70 17-52 25Z"></path><path class="step-front" d="m0 0 70 17v88L0 88Z"></path><text x="14" y="40">15<tspan class="step-unit" dx="4">天</tspan></text></g>
+            <g class="ladder-step" data-step="5" transform="translate(532 159)"><path class="step-side" d="m0 0 52-25 70 17v96l-52 25-70-17Z"></path><path class="step-top" d="m0 0 52-25 70 17-52 25Z"></path><path class="step-front" d="m0 0 70 17v96L0 96Z"></path><text x="14" y="40">30<tspan class="step-unit" dx="4">天</tspan></text></g>
+            <g class="ladder-step" data-step="6" transform="translate(628 132)"><path class="step-side" d="m0 0 52-25 70 17v104l-52 25-70-17Z"></path><path class="step-top" d="m0 0 52-25 70 17-52 25Z"></path><path class="step-front" d="m0 0 70 17v104L0 104Z"></path><text x="14" y="40">60<tspan class="step-unit" dx="4">天</tspan></text></g>
+            <g class="climbing-card" id="climbing-card" transform="translate(34 167) rotate(-7)">
+              <rect class="ladder-card-paper" width="170" height="106" rx="6"></rect><path class="ladder-card-rule" d="M0 19h170"></path>
+              <text class="ladder-card-word" x="15" y="57" lang="en">commute</text><text class="ladder-card-meaning" x="16" y="77">v. 通勤；乘车往返</text>
+              <text class="ladder-card-level" id="ladder-card-level" x="16" y="94">第 1 级 · 明天再见</text>
+            </g>
+          </svg>
+        </div>
+        <div class="memory-rules">
+          <div><span class="rule-action">什么都不点</span><strong>+1<span>级</span></strong><p>复习卡展示过，就向前一步。</p></div>
+          <div><span class="rule-action"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>点「认识」</span><strong>+2<span>级</span></strong><p>复习时认识了，就再跨一步。</p></div>
+          <div><span class="rule-action"><svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>点「不熟」</span><strong class="rule-reset">回到第 1 级</strong><p>忘了也没关系，再见几次就好。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="family section paper-section" id="family" aria-labelledby="family-title">
+      <div class="wrap">
+        <div class="family-heading"><div><p class="eyebrow"><span class="red-rule"></span>小组件家族</p><h2 id="family-title">哪块屏幕，<br>都能<span class="marker">放一词</span>。</h2></div><p class="section-copy">桌面、锁屏、床头。<br>在你本来就会看见的地方。</p></div>
+        <div class="family-primary">
+          <article class="family-item family-small">
+            <div class="render-slot" data-render="small">
+              <div class="small-widget index-card">
+                <div class="small-top"><span>核心 3000 · 新</span><svg class="icon" aria-hidden="true"><use href="#i-volume"></use></svg></div>
+                <strong lang="en">vivid</strong><span class="small-ipa">/ˈvɪvɪd/</span><span class="widget-rule"></span><p><span>adj.</span> 生动的；<br>鲜艳的</p>
+              </div>
+            </div>
+            <h3>桌面 · 小号</h3><p>一眼，词与义。</p>
+          </article>
+          <article class="family-item family-medium">
+            <div class="render-slot" data-render="medium">
+              <div class="widget-medium">
+                <div class="widget-word-row"><strong class="mock-headword" lang="en">reluctant</strong><span class="widget-ipa">/rɪˈlʌktənt/</span></div>
+                <p class="widget-meaning"><span>adj.</span> 不情愿的；勉强的</p><span class="widget-rule"></span>
+                <p class="widget-example" lang="en">Tom is <mark>reluctant</mark> to talk about it.</p><p class="widget-translation">汤姆不太愿意谈这件事。</p>
+                <span class="mock-widget-button mock-speak" aria-hidden="true"><svg class="icon"><use href="#i-volume"></use></svg></span><span class="mock-widget-button mock-known" aria-hidden="true"><svg class="icon"><use href="#i-check"></use></svg></span>
+              </div>
+            </div>
+            <h3>桌面 · 中号</h3><p>再多看一句，就更记得住。</p>
+          </article>
+          <article class="family-item family-large">
+            <div class="render-slot" data-render="large">
+              <div class="large-widget index-card">
+                <div class="large-label"><span>核心 3000 · 今日新词</span><span>1 / 3</span></div>
+                <strong class="large-word" lang="en">commute</strong>
+                <div class="large-ipa"><span>美 /kəˈmjuːt/</span><svg class="icon" aria-hidden="true"><use href="#i-volume"></use></svg></div>
+                <p class="large-meaning"><span>v.</span> 通勤；乘车往返</p><span class="widget-rule"></span>
+                <p class="large-example" lang="en">I spend a lot of time <mark>commuting</mark>.</p><p class="large-translation">我花很多时间通勤。</p>
+                <p class="large-source">Tatoeba #9811418</p>
+                <div class="large-review"><span>下次复习 · 明天</span><span class="review-dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div class="large-actions"><span><svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>不熟</span><span><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>认识</span></div>
+              </div>
+            </div>
+            <h3>桌面 · 大号</h3><p>词、音、义、句，完整的一张卡。</p>
+          </article>
+        </div>
+        <div class="family-secondary">
+          <div class="lock-family-group">
+            <article class="family-item">
+              <div class="render-slot" data-render="lockInline"><div class="inline-widget"><svg class="icon" aria-hidden="true"><use href="#i-note"></use></svg><span lang="en">commute <span lang="zh-CN">· 通勤</span></span></div></div>
+              <h3>锁屏 · 单行</h3><p>时间上面，也有一词。</p>
+            </article>
+            <article class="family-item">
+              <div class="render-slot" data-render="lockRectangular">
+                <div class="rectangular-widget"><div><strong lang="en">commute</strong><span>/kəˈmjuːt/</span></div><p>v. 通勤；乘车往返</p><p lang="en">I spend a lot of time <b>commuting</b>.</p></div>
+              </div>
+              <h3>锁屏 · 矩形</h3><p>还没解锁，就遇见了。</p>
+            </article>
+          </div>
+          <article class="family-item family-standby">
+            <div class="render-slot" data-render="standby"><div class="standby-widget"><div class="standby-clock"><span>23</span><span>00</span></div><div class="standby-word"><small>一词</small><strong lang="en">vivid</strong><span>/ˈvɪvɪd/</span><p>生动的；鲜艳的</p></div></div></div>
+            <h3>StandBy · 夜间</h3><p>夜里，安静地亮着。</p>
+          </article>
+          <article class="family-item family-control">
+            <div class="render-slot" data-render="controlCenter"><div class="control-widget"><svg class="icon" aria-hidden="true"><use href="#i-volume"></use></svg><span>读今日单词</span></div></div>
+            <h3>控制中心</h3><p>按一下，听今天这一词。<br><span class="version-note">iOS 18 及以上</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="numbers" aria-label="一词的离线词库">
+      <div class="wrap">
+        <p class="numbers-caption">小小的一张卡，装得下这些。</p>
+        <dl class="stats">
+          <div><dt>个单词</dt><dd><span data-count="15271">15,271</span></dd></div>
+          <div><dt>本词书</dt><dd><span data-count="9">9</span></dd></div>
+          <div><dt>条中英例句</dt><dd><span data-count="27161">27,161</span></dd></div>
+          <div><dt>条数据收集</dt><dd><span data-count="0">0</span></dd></div>
+        </dl>
+        <ul class="book-list" aria-label="九本词书"><li>核心 3000</li><li>初中</li><li>高中</li><li>CET-4</li><li>CET-6</li><li>考研</li><li>雅思</li><li>托福</li><li>GRE</li></ul>
+      </div>
+    </section>
+
+    <section class="platforms section" id="platforms" aria-labelledby="platforms-title">
+      <div class="wrap">
+        <div class="platforms-heading"><p class="eyebrow"><span class="red-rule"></span>不只在口袋里</p><h2 id="platforms-title">今天在 iPhone。<br>下一站，在你身边。</h2></div>
+        <div class="platform-grid">
+          <article class="platform-item">
+            <div class="platform-visual"><div class="mini-phone" aria-hidden="true"><div class="mini-island"></div><span class="mini-time">07:00</span><div class="mini-card"><strong lang="en">commute</strong><span>/kəˈmjuːt/</span><p>v. 通勤；乘车往返</p></div><div class="mini-home"></div></div></div>
+            <h3>iPhone <span class="platform-tag tag-now">现在</span></h3><p>桌面、锁屏，一眼一个词。</p><span class="platform-status">App Store 即将上架</span>
+          </article>
+          <article class="platform-item">
+            <div class="platform-visual"><div class="mac-device" aria-hidden="true"><div class="mac-screen"><div class="mac-menubar"><span>一词</span><span>周六 15:00</span></div><div class="mac-card index-card"><span>核心 3000 · 新</span><strong lang="en">vivid</strong><span>/ˈvɪvɪd/</span><p>adj. 生动的；鲜艳的</p></div><div class="mac-dock"><i></i><i></i><i></i><i></i><i></i></div></div><div class="mac-chin"></div><div class="mac-foot"></div></div></div>
+            <h3>Mac <span class="platform-tag">接下来</span></h3><p>桌面小组件，陪你工作。</p><span class="platform-status">正在计划中</span>
+          </article>
+          <article class="platform-item">
+            <div class="platform-visual"><div class="watch-device" aria-hidden="true"><div class="watch-strap strap-top"></div><div class="watch-strap strap-bottom"></div><div class="watch-crown"></div><div class="watch-screen"><span class="watch-time">11:00</span><div class="watch-card"><small>一词</small><strong lang="en">reluctant</strong><p>不情愿的；勉强的</p><svg class="icon"><use href="#i-volume"></use></svg></div></div></div></div>
+            <h3>Apple Watch <span class="platform-tag">接下来</span></h3><p>通知与智能叠放，抬腕遇见。</p><span class="platform-status">正在计划中</span>
+          </article>
+        </div>
+        <p class="sync-line"><svg class="icon" aria-hidden="true"><use href="#i-cloud"></use></svg>进度随你走，iCloud 自动同步。</p>
+      </div>
+    </section>
+
+    <section class="privacy section" id="privacy" aria-labelledby="privacy-title">
+      <div class="wrap privacy-layout">
+        <div><p class="eyebrow"><span class="red-rule"></span>安静，也干净</p><h2 id="privacy-title">记住单词。<br><span class="marker">不记住你</span>。</h2></div>
+        <div class="privacy-content">
+          <div class="privacy-row"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg><div><h3>不用注册，没有广告。</h3><p>没有账号，没有打卡排名，也没有数据追踪。</p></div></div>
+          <div class="privacy-row"><svg class="icon" aria-hidden="true"><use href="#i-wifi-off"></use></svg><div><h3>把词库，完整放进手机。</h3><p>单词、例句和系统发音，离线也能用。</p></div></div>
+          <div class="privacy-row"><svg class="icon" aria-hidden="true"><use href="#i-cloud"></use></svg><div><h3>只同步到你的 iCloud。</h3><p>进度与设置存入 iCloud 私有数据库，开发者看不到。</p></div></div>
+          <div class="data-credits"><span>好内容，有出处。</span><p><a href="https://github.com/skywind3000/ECDICT" target="_blank" rel="noopener noreferrer">ECDICT <small>MIT</small></a><a href="https://github.com/cmusphinx/cmudict" target="_blank" rel="noopener noreferrer">CMU Pronouncing Dictionary <small>BSD</small></a><a href="https://tatoeba.org/zh-cn/" target="_blank" rel="noopener noreferrer">Tatoeba <small>CC BY 2.0 FR</small></a></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq-layout">
+        <div><p class="eyebrow"><span class="red-rule"></span>再说清楚一点</p><h2 id="faq-title">你可能<br>还想知道。</h2></div>
+        <div class="faq-list">
+          <details><summary>必须每天打开 App 吗？<span class="faq-plus" aria-hidden="true"></span></summary><p>不用。安装后添加桌面或锁屏小组件，就能用默认词书和节奏学习。选词书、调设置时，再打开 App。</p></details>
+          <details><summary>什么都不点，也会安排复习吗？<span class="faq-plus" aria-hidden="true"></span></summary><p>会。新词进入七级记忆阶梯；复习卡展示过就前进 1 级，复习时点「认识」前进 2 级，点「不熟」回到第 1 级。</p></details>
+          <details><summary>能选词书、调整每天的词量吗？<span class="faq-plus" aria-hidden="true"></span></summary><p>可以。九本词书随时切换，已学过的词不用重来。每天新词可选 1、3、5、10 个，默认 3 个，轮换间隔也能调整。</p></details>
+          <details><summary>没网能用吗？发音会打开 App 吗？<span class="faq-plus" aria-hidden="true"></span></summary><p>词库与例句全部离线打包，发音使用 iPhone 系统语音。点小组件上的发音按钮，不会跳进 App。只有 iCloud 同步需要联网。</p></details>
+          <details><summary>支持哪些设备和系统？<span class="faq-plus" aria-hidden="true"></span></summary><p>先支持 iOS 17 及以上的 iPhone。控制中心读词需要 iOS 18 及以上。Mac 桌面小组件与 Apple Watch 通知、智能叠放会随后推出。</p></details>
+          <details><summary>什么时候能下载？要多少钱？<span class="faq-plus" aria-hidden="true"></span></summary><p>iPhone、Apple Watch 和 Mac 版正在提交 App Store 审核，上架后这里会放下载链接。一次买断 0.99 美元，同一个 Apple 账户三端通用；没有内购、没有广告，也不需要注册账号。</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="join section" id="join" aria-labelledby="join-title">
+      <div class="wrap join-inner">
+        <img class="join-icon" src="assets/apple-touch-icon.png" width="64" height="64" alt="一词：白卡片、红色细线与黄色的一">
+        <h2 id="join-title">背单词这件事，<br><span class="marker">别再拖延</span>。</h2>
+        <p class="join-example" lang="en">I have to stop <mark>procrastinating</mark>.</p>
+        <p class="join-translation">我不能再拖延了。</p>
+        <button type="button" class="button button-yellow coming-soon" disabled><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>App Store 即将上架</button>
+        <p class="join-note">iPhone · Apple Watch · Mac · 一次买断 0.99 美元</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-inner"><a class="brand" href="#top" aria-label="一词，回到顶部"><img src="assets/favicon.png" width="28" height="28" alt=""><span>一词<span class="brand-dot">.</span></span></a><p>© 2026 一词</p><div class="footer-links"><a href="privacy.html">隐私政策</a><a href="support.html">支持</a><a href="#privacy">数据来源</a><a href="https://github.com/skywind3000/ECDICT" target="_blank" rel="noopener noreferrer">ECDICT</a><a href="https://github.com/cmusphinx/cmudict" target="_blank" rel="noopener noreferrer">CMUdict</a><a href="https://tatoeba.org/zh-cn/" target="_blank" rel="noopener noreferrer">Tatoeba</a></div></div></footer>
+</body>
+</html>

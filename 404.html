@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B0E18">
+  <meta name="robots" content="noindex">
+  <title>这一页不在这里 · 一词</title>
+  <base href="./">
+  <script>
+    const path = location.pathname;
+    const root = path.endsWith("/404.html") ? path.slice(0, -8)
+      : location.hostname.endsWith(".github.io") ? `/${path.split("/").filter(Boolean)[0] || ""}/`
+      : "/";
+    document.querySelector("base").href = root.replace(/\/+/g, "/");
+  </script>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="error-page">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="assets/apple-touch-icon.png" width="36" height="36" alt=""><span>一词<span class="brand-dot">.</span></span></a>
+      <p class="error-number">404</p>
+      <h1>这一页，<br>不在这里。</h1>
+      <p>回到一词，顺便认识一个词。</p>
+      <a class="button button-yellow" href="./">回到首页</a>
+      <p><a href="support.html">支持 / Support</a> · <a href="privacy.html">隐私政策 / Privacy</a></p>
+    </div>
+  </main>
+</body>
+</html>
