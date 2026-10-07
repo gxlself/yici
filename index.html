@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0B0E18">
   <title>一词 · 不用打开 App 的背单词</title>
-  <meta name="description" content="把一张单词卡放在 iPhone 桌面和锁屏。每次看手机，顺便认识一个词。15,271 个单词、9 本词书、27,161 条中英例句，离线可用，无账号、无广告、不收集数据。">
+  <meta name="description" content="把一张单词卡放在 iPhone 桌面和锁屏。英语、日语、汉语、韩语、德语、法语，每种语言都有自己的卡片：振假名、声调色、实际读音、词性颜色、连诵弧线。离线可用，无账号、无广告、不收集数据。">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:site_name" content="一词">
   <meta property="og:title" content="一词 · 不用打开 App 的背单词">
-  <meta property="og:description" content="每次看手机，顺便认识一个词。iPhone 桌面与锁屏单词卡，离线可用，不打卡，不催你。">
+  <meta property="og:description" content="每次看手机，顺便认识一个词。英日汉韩德法六种语言的桌面与锁屏单词卡，离线可用，不打卡，不催你。">
   <meta property="og:image" content="https://gxlself.github.io/yici/assets/og.png">
   <meta property="og:url" content="https://gxlself.github.io/yici/">
   <meta property="og:image:width" content="1200">
@@ -60,6 +60,7 @@
       </a>
       <nav aria-label="主导航">
         <a href="#playground">试一张</a>
+        <a href="#languages">六种语言</a>
         <a href="#day">一天的节奏</a>
         <a href="#family">卡片家族</a>
         <a href="#faq">常见问题</a>
@@ -72,7 +73,7 @@
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="wrap hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="red-rule"></span>一词 · iPhone 单词小组件</p>
+          <p class="eyebrow"><span class="red-rule"></span>一词 · 英日汉韩德法 · 单词小组件</p>
           <h1 id="hero-title"><span class="headline-line"><span class="marker marker-hero">不用打开</span> <span class="app-word">App</span></span><span class="headline-line">的背单词<span class="yellow-period">。</span></span></h1>
           <p class="hero-sub">每次看手机，顺便认识一个词。<br>不打卡，不催你，也不用专门开始。</p>
           <div class="hero-actions">
@@ -262,6 +263,39 @@
       </div>
     </section>
 
+    <section class="languages section" id="languages" aria-labelledby="languages-title">
+      <div class="wrap">
+        <div class="languages-heading"><div><p class="eyebrow"><span class="red-rule"></span>六种语言</p><h2 id="languages-title">一门语言，<br>一种<span class="marker">自己的卡</span>。</h2></div><p class="section-copy">不是换个词库就完事。<br>每门语言，都按它的难点来画这张卡。<br>小组件可以各自选语言，桌面上并排放。</p></div>
+        <div class="languages-grid">
+          <figure class="lang-item">
+            <img src="assets/renders/lang-en.png" width="1014" height="474" loading="lazy" decoding="async" alt="英语单词卡：一词中号小组件">
+            <figcaption><h3>英语<span lang="en">English</span></h3><p>英美音标、例句高亮、词形与搭配。九本词书，从初中到 GRE。</p></figcaption>
+          </figure>
+          <figure class="lang-item">
+            <img src="assets/renders/lang-ja.png" width="1014" height="474" loading="lazy" decoding="async" alt="日语单词卡：一词中号小组件">
+            <figcaption><h3>日语<span lang="ja">日本語</span></h3><p>振假名、声调线，例句高亮活用形；部分中日同形词附提示。JLPT N5–N1。</p></figcaption>
+          </figure>
+          <figure class="lang-item">
+            <img src="assets/renders/lang-zh.png" width="1014" height="474" loading="lazy" decoding="async" alt="汉语单词卡：一词中号小组件">
+            <figcaption><h3>汉语<span lang="zh-Hant">中文</span></h3><p>拼音按声调着色，变调、量词与汉字部件。面向外国学习者，释义为英文。HSK 1–6。</p></figcaption>
+          </figure>
+          <figure class="lang-item">
+            <img src="assets/renders/lang-ko.png" width="1014" height="474" loading="lazy" decoding="async" alt="韩语单词卡：一词中号小组件">
+            <figcaption><h3>韩语<span lang="ko">한국어</span></h3><p>方括号标出实际读音，显示汉字词，例句标注音变。TOPIK 分级。</p></figcaption>
+          </figure>
+          <figure class="lang-item">
+            <img src="assets/renders/lang-de.png" width="1014" height="474" loading="lazy" decoding="async" alt="德语单词卡：一词中号小组件">
+            <figcaption><h3>德语<span lang="de">Deutsch</span></h3><p>名词按词性着色并附冠词，IPA、复数与动词三形；可分动词两头高亮。CEFR A1–B2。</p></figcaption>
+          </figure>
+          <figure class="lang-item">
+            <img src="assets/renders/lang-fr.png" width="1014" height="474" loading="lazy" decoding="async" alt="法语单词卡：一词中号小组件">
+            <figcaption><h3>法语<span lang="fr">Français</span></h3><p>阴阳性与阴性形式、IPA，例句画出连诵弧线，不发音字母变淡。CEFR A1–B2。</p></figcaption>
+          </figure>
+        </div>
+        <p class="languages-note">一次买断，六种语言全部包含。每门语言各有词书和进度，在设置里随时切换。</p>
+      </div>
+    </section>
+
     <section class="memory section" id="memory" aria-labelledby="memory-title">
       <div class="wrap">
         <div class="memory-heading">
@@ -362,18 +396,18 @@
       <div class="wrap">
         <p class="numbers-caption">小小的一张卡，装得下这些。</p>
         <dl class="stats">
-          <div><dt>个单词</dt><dd><span data-count="15271">15,271</span></dd></div>
-          <div><dt>本词书</dt><dd><span data-count="9">9</span></dd></div>
+          <div><dt>种学习语言</dt><dd><span data-count="6">6</span></dd></div>
+          <div><dt>个英语单词</dt><dd><span data-count="15271">15,271</span></dd></div>
           <div><dt>条中英例句</dt><dd><span data-count="27161">27,161</span></dd></div>
           <div><dt>条数据收集</dt><dd><span data-count="0">0</span></dd></div>
         </dl>
-        <ul class="book-list" aria-label="九本词书"><li>核心 3000</li><li>初中</li><li>高中</li><li>CET-4</li><li>CET-6</li><li>考研</li><li>雅思</li><li>托福</li><li>GRE</li></ul>
+        <ul class="book-list" aria-label="词书"><li>核心 3000</li><li>初中</li><li>高中</li><li>CET-4</li><li>CET-6</li><li>考研</li><li>雅思</li><li>托福</li><li>GRE</li><li>JLPT N5–N1</li><li>HSK 1–6</li><li>TOPIK</li><li>德语 A1–B2</li><li>法语 A1–B2</li></ul>
       </div>
     </section>
 
     <section class="platforms section" id="platforms" aria-labelledby="platforms-title">
       <div class="wrap">
-        <div class="platforms-heading"><p class="eyebrow"><span class="red-rule"></span>不只在口袋里</p><h2 id="platforms-title">今天在 iPhone。<br>下一站，在你身边。</h2></div>
+        <div class="platforms-heading"><p class="eyebrow"><span class="red-rule"></span>不只在口袋里</p><h2 id="platforms-title">iPhone、Mac、手表。<br>一直在你身边。</h2></div>
         <div class="platform-grid">
           <article class="platform-item">
             <div class="platform-visual"><div class="mini-phone" aria-hidden="true"><div class="mini-island"></div><span class="mini-time">07:00</span><div class="mini-card"><strong lang="en">commute</strong><span>/kəˈmjuːt/</span><p>v. 通勤；乘车往返</p></div><div class="mini-home"></div></div></div>
@@ -381,11 +415,11 @@
           </article>
           <article class="platform-item">
             <div class="platform-visual"><div class="mac-device" aria-hidden="true"><div class="mac-screen"><div class="mac-menubar"><span>一词</span><span>周六 15:00</span></div><div class="mac-card index-card"><span>核心 3000 · 新</span><strong lang="en">vivid</strong><span>/ˈvɪvɪd/</span><p>adj. 生动的；鲜艳的</p></div><div class="mac-dock"><i></i><i></i><i></i><i></i><i></i></div></div><div class="mac-chin"></div><div class="mac-foot"></div></div></div>
-            <h3>Mac <span class="platform-tag">接下来</span></h3><p>桌面小组件，陪你工作。</p><span class="platform-status">正在计划中</span>
+            <h3>Mac <span class="platform-tag tag-now">同时上架</span></h3><p>菜单栏单词与桌面小组件，陪你工作。</p><span class="platform-status">与 iPhone 一次购买</span>
           </article>
           <article class="platform-item">
             <div class="platform-visual"><div class="watch-device" aria-hidden="true"><div class="watch-strap strap-top"></div><div class="watch-strap strap-bottom"></div><div class="watch-crown"></div><div class="watch-screen"><span class="watch-time">11:00</span><div class="watch-card"><small>一词</small><strong lang="en">reluctant</strong><p>不情愿的；勉强的</p><svg class="icon"><use href="#i-volume"></use></svg></div></div></div></div>
-            <h3>Apple Watch <span class="platform-tag">接下来</span></h3><p>通知与智能叠放，抬腕遇见。</p><span class="platform-status">正在计划中</span>
+            <h3>Apple Watch <span class="platform-tag tag-now">同时上架</span></h3><p>表盘、通知与智能叠放，抬腕遇见。</p><span class="platform-status">随 iPhone App 安装</span>
           </article>
         </div>
         <p class="sync-line"><svg class="icon" aria-hidden="true"><use href="#i-cloud"></use></svg>进度随你走，iCloud 自动同步。</p>
@@ -399,7 +433,7 @@
           <div class="privacy-row"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg><div><h3>不用注册，没有广告。</h3><p>没有账号，没有打卡排名，也没有数据追踪。</p></div></div>
           <div class="privacy-row"><svg class="icon" aria-hidden="true"><use href="#i-wifi-off"></use></svg><div><h3>把词库，完整放进手机。</h3><p>单词、例句和系统发音，离线也能用。</p></div></div>
           <div class="privacy-row"><svg class="icon" aria-hidden="true"><use href="#i-cloud"></use></svg><div><h3>只同步到你的 iCloud。</h3><p>进度与设置存入 iCloud 私有数据库，开发者看不到。</p></div></div>
-          <div class="data-credits"><span>好内容，有出处。</span><p><a href="https://github.com/skywind3000/ECDICT" target="_blank" rel="noopener noreferrer">ECDICT <small>MIT</small></a><a href="https://github.com/cmusphinx/cmudict" target="_blank" rel="noopener noreferrer">CMU Pronouncing Dictionary <small>BSD</small></a><a href="https://tatoeba.org/zh-cn/" target="_blank" rel="noopener noreferrer">Tatoeba <small>CC BY 2.0 FR</small></a></p></div>
+          <div class="data-credits"><span>好内容，有出处。</span><p><a href="https://github.com/skywind3000/ECDICT" target="_blank" rel="noopener noreferrer">ECDICT <small>MIT</small></a><a href="https://github.com/cmusphinx/cmudict" target="_blank" rel="noopener noreferrer">CMU Pronouncing Dictionary <small>BSD</small></a><a href="https://tatoeba.org/zh-cn/" target="_blank" rel="noopener noreferrer">Tatoeba <small>CC BY 2.0 FR</small></a><a href="https://www.edrdg.org/jmdict/j_jmdict.html" target="_blank" rel="noopener noreferrer">JMdict <small>CC BY-SA 4.0</small></a><a href="https://cc-cedict.org/" target="_blank" rel="noopener noreferrer">CC-CEDICT <small>CC BY-SA 4.0</small></a><a href="https://kaikki.org/" target="_blank" rel="noopener noreferrer">Wiktionary / Kaikki <small>CC BY-SA 4.0</small></a><a href="http://www.lexique.org/" target="_blank" rel="noopener noreferrer">Lexique 3.83 <small>CC BY-SA 4.0</small></a><a href="https://github.com/skishore/makemeahanzi" target="_blank" rel="noopener noreferrer">Make Me a Hanzi <small>LGPL</small></a></p></div>
         </div>
       </div>
     </section>
@@ -410,10 +444,11 @@
         <div class="faq-list">
           <details><summary>必须每天打开 App 吗？<span class="faq-plus" aria-hidden="true"></span></summary><p>不用。安装后添加桌面或锁屏小组件，就能用默认词书和节奏学习。选词书、调设置时，再打开 App。</p></details>
           <details><summary>什么都不点，也会安排复习吗？<span class="faq-plus" aria-hidden="true"></span></summary><p>会。新词进入七级记忆阶梯；复习卡展示过就前进 1 级，复习时点「认识」前进 2 级，点「不熟」回到第 1 级。</p></details>
-          <details><summary>能选词书、调整每天的词量吗？<span class="faq-plus" aria-hidden="true"></span></summary><p>可以。九本词书随时切换，已学过的词不用重来。每天新词可选 1、3、5、10 个，默认 3 个，轮换间隔也能调整。</p></details>
-          <details><summary>没网能用吗？发音会打开 App 吗？<span class="faq-plus" aria-hidden="true"></span></summary><p>词库与例句全部离线打包，发音使用 iPhone 系统语音。点小组件上的发音按钮，不会跳进 App。只有 iCloud 同步需要联网。</p></details>
-          <details><summary>支持哪些设备和系统？<span class="faq-plus" aria-hidden="true"></span></summary><p>先支持 iOS 17 及以上的 iPhone。控制中心读词需要 iOS 18 及以上。Mac 桌面小组件与 Apple Watch 通知、智能叠放会随后推出。</p></details>
-          <details><summary>什么时候能下载？要多少钱？<span class="faq-plus" aria-hidden="true"></span></summary><p>iPhone、Apple Watch 和 Mac 版正在提交 App Store 审核，上架后这里会放下载链接。一次买断 0.99 美元，同一个 Apple 账户三端通用；没有内购、没有广告，也不需要注册账号。</p></details>
+          <details><summary>支持哪些语言？能同时学几门吗？<span class="faq-plus" aria-hidden="true"></span></summary><p>英语、日语、汉语、韩语、德语、法语。每门语言有自己的词书、进度和卡片样式，在设置的「学习语言」里随时切换；小组件可以各自选语言，比如桌面上一张英语、一张日语。汉语课程面向外国学习者，释义为英文。</p></details>
+          <details><summary>能选词书、调整每天的词量吗？<span class="faq-plus" aria-hidden="true"></span></summary><p>可以。英语有九本词书，其他语言按 JLPT、HSK、TOPIK、CEFR 分级，随时切换，已学过的词不用重来。每天新词可选 1、3、5、10 个，默认 3 个，轮换间隔也能调整。</p></details>
+          <details><summary>没网能用吗？发音会打开 App 吗？<span class="faq-plus" aria-hidden="true"></span></summary><p>六种语言的词库与例句全部离线打包，发音使用系统自带的各语言语音。点小组件上的发音按钮，不会跳进 App。只有 iCloud 同步需要联网。</p></details>
+          <details><summary>支持哪些设备和系统？<span class="faq-plus" aria-hidden="true"></span></summary><p>iPhone 需要 iOS 17 及以上，控制中心读词需要 iOS 18 及以上。Mac 需要 macOS 14 及以上，提供菜单栏单词与桌面小组件。Apple Watch 需要 watchOS 10 及以上，随 iPhone App 安装。</p></details>
+          <details><summary>什么时候能下载？要多少钱？<span class="faq-plus" aria-hidden="true"></span></summary><p>iPhone、Apple Watch 和 Mac 版正在提交 App Store 审核，上架后这里会放下载链接。一次买断 0.99 美元，六种语言全部包含，同一个 Apple 账户三端通用；没有内购、没有广告，也不需要注册账号。</p></details>
         </div>
       </div>
     </section>
@@ -425,7 +460,7 @@
         <p class="join-example" lang="en">I have to stop <mark>procrastinating</mark>.</p>
         <p class="join-translation">我不能再拖延了。</p>
         <button type="button" class="button button-yellow coming-soon" disabled><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>App Store 即将上架</button>
-        <p class="join-note">iPhone · Apple Watch · Mac · 一次买断 0.99 美元</p>
+        <p class="join-note">英日汉韩德法 · iPhone · Apple Watch · Mac · 一次买断 0.99 美元</p>
       </div>
     </section>
   </main>
